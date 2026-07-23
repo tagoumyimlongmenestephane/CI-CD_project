@@ -1,5 +1,17 @@
 #!/usr/bin/env bash
+set -e
 
-virtualenv /home/ubuntu/ven
-source /home/ubuntu/ven/bin/activate
-pip install -r /home/ubuntu/project_devops/requirements.txt
+# 1. Se placer dans le dossier du projet
+cd /home/ubuntu/project_devops
+
+# 2. Créer l'environnement virtuel 'ven' avec module natif python3-venv s'il n'existe pas
+if [ ! -d "ven" ]; then
+    python3 -m venv ven
+fi
+
+# 3. Activer l'environnement virtuel
+source ven/bin/activate
+
+# 4. Mettre à jour pip et installer les dépendances dans l'environnement virtuel
+pip install --upgrade pip
+pip install -r requirements.txt
