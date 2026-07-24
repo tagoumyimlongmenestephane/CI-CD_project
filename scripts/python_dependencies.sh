@@ -3,5 +3,5 @@
 set -e
 
 python3 -m venv /home/ubuntu/venv
-source /home/ubuntu/ven/bin/activate
+source /home/ubuntu/venv/bin/activate
 pip install --break-system-packages -r requirements.txt
