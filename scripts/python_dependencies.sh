@@ -14,4 +14,4 @@ source ven/bin/activate
 
 # 4. Mettre à jour pip et installer les dépendances dans l'environnement virtuel
 pip install --upgrade pip
-pip install -r requirements.txt
+pip install --break-system-packages -r requirements.txt
